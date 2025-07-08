@@ -1,0 +1,198 @@
+
+.table-container {
+  margin: 30px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+th,
+td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Header background */
+thead {
+  background-color: #4a90e2;
+  color: white;
+}
+
+/* Zebra stripes */
+tr:nth-child(even) {
+  background-color: #f0f4f8;
+}
+
+/* Hover effect */
+/* tbody tr:hover {
+  background-color: #caf5ec;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+} */
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.action-button {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  padding: 6px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1;
+  transition: transform 1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-right: 8px;
+}
+
+
+.action-button:hover {
+  transform: translateY(-4px);
+}
+
+
+.action-button::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: top 0.3s ease;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+
+.action-button:hover::before {
+  top: 0;
+}
+
+/* Icon stays on top */
+.action-button i {
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+}
+
+/* Specific color variants */
+.view-button {
+  background-color: #1d3557;
+}
+.view-button::before {
+  background-color: #2e8b57;
+}
+
+.edit-button {
+  background-color: #1d3557;
+}
+.edit-button::before {
+  background-color: 		#d97e1d;
+}
+
+.delete-button {
+  background-color: #1d3557;
+}
+.delete-button::before {
+  background-color: red;
+}
+
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-row {
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  opacity: 0; /* start hidden */
+}
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animated-container {
+    width: 100%;
+    background: white;
+    height: 50px;
+    border-radius: 12px;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .animated-container a {
+    text-decoration: none;
+    padding: 8px 20px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #2e8b57 50%, 	#1d1d1d 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    border-radius: 6px;
+    transition: background-position 0.4s ease, transform 0.3s ease;
+    display: inline-block;
+    opacity: 0;
+  }
+
+  .animated-container a:first-child {
+    animation: slideInLeft 1s ease-out forwards;
+  }
+
+  .animated-container a:last-child {
+    animation: slideInRight 1s ease-out forwards;
+  }
+
+  .animated-container a:hover {
+    background-position: right bottom;
+    transform: scale(1.05);
+    
+  }
+
+  
