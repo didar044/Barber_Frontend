@@ -1,6 +1,7 @@
 <template>
   <div class="animated-container">
-    <div><router-link to="/shiftslist"><i class="bi bi-arrow-left"></i> Back</router-link></div>
+    <router-link to="/shiftslist"><i class="bi bi-arrow-left"></i> Back</router-link>
+    <router-link to="/"><i class="bi bi-house-fill"></i> Home</router-link>
   </div>
 
   <div class="container mt-4">

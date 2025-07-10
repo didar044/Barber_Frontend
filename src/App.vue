@@ -428,17 +428,17 @@
 								<li><router-link to="/shiftslist">Shift List</router-link></li>	
 							</ul>
 						</li>
-						<!-- <li class="dropdown">
+						<li class="dropdown">
 							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon bi bi-table"></span
-								><span class="mtext">Tables</span>
+								<span class="micon bi bi-scissors"></span
+								><span class="mtext">Service</span>
 							</a>
 							<ul class="submenu">
-								<li><a href="basic-table.html">Basic Tables</a></li>
-								<li><a href="datatable.html">DataTables</a></li>
+								<li><router-link to="/servicecategorieslist">Service Category List</router-link></li>
+								
 							</ul>
 						</li>
-						<li>
+					<!-- 	<li>
 							<a href="calendar.html" class="dropdown-toggle no-arrow">
 								<span class="micon bi bi-calendar4-week"></span
 								><span class="mtext">Calendar</span>

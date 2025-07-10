@@ -8,8 +8,8 @@
 <template>
 
 <div class="animated-container">
-  <div><router-link to="/"><i class="bi bi-house-fill"></i> Home</router-link></div>
-  <div><router-link to="/addshifts"><i class="bi bi-plus-circle"></i> Add</router-link></div>
+  <router-link to="/"><i class="bi bi-house-fill"></i> Home</router-link>
+  <router-link to="/addshifts"><i class="bi bi-plus-circle"></i> Add</router-link>
 </div>
   <div class="table-container">
     <h2>Shift List</h2>

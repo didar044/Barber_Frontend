@@ -1,8 +1,9 @@
 <template>
-<div class="animated-container">
-  <div><router-link to="/"><i class="bi bi-house-fill"></i> Home</router-link></div>
+ <div class="animated-container">
+  <router-link to="/barberlist"><i class="bi bi-arrow-left"></i> Back</router-link>
+  <router-link to="/"><i class="bi bi-house-fill"></i> Home</router-link>
   
-</div>
+  </div>
 
   <div class="barber-form-container">
     <h2 class="barber-title">Add New Haircut Crew</h2>
