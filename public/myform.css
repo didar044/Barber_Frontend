@@ -1,0 +1,131 @@
+
+.barber-form-container {
+  margin: 40px auto;
+  padding: 28px 32px;
+  background: #f9fbfc;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+.barber-title {
+  text-align: center;
+  margin-bottom: 32px;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #1a3e59;
+}
+
+.barber-required {
+  color: red;
+  margin-left: 4px;
+}
+
+.barber-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.barber-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px 36px;
+}
+
+.barber-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.barber-form-group label {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #34495e;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+input,
+select,
+textarea {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 2px solid #95a5a6;
+  border-radius: 8px;
+  outline-offset: 3px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  color: #2c3e50;
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 4px rgb(0 0 0 / 0.05);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 8px 2px rgba(41, 128, 185, 0.3);
+  background-color: #fff;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.barber-textarea-group {
+  grid-column: span 2;
+}
+
+.barber-submit-btn {
+  margin-top: 36px;
+  align-self: center;
+  background: #2e8b57;
+  color: white;
+  border: none;
+  padding: 14px 44px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.4s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.barber-submit-btn:hover {
+  background: #1d3557;
+  transform: scale(1.05);
+}
+
+.barber-success-message {
+  color: #27ae60;
+  margin-top: 28px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 700px) {
+  .barber-form-container {
+    margin: 24px 12px;
+    padding: 20px 24px;
+  }
+
+  .barber-row {
+    grid-template-columns: 1fr;
+    gap: 18px 0;
+  }
+
+  .barber-textarea-group {
+    grid-column: auto;
+  }
+
+  .barber-submit-btn {
+    width: 100%;
+    padding: 14px 0;
+  }
+}

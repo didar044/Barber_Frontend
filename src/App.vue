@@ -388,14 +388,14 @@
 
     <div class="left-side-bar">
 			<div class="brand-logo">
-				<a href="index.html">
+				<router-link to="/">
 					<img src="/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
 					<img
 						src="/vendors/images/deskapp-logo-white.svg"
 						alt=""
 						class="light-logo"
 					/>
-				</a>
+				</router-link>
 				<div class="close-sidebar" data-toggle="left-sidebar-close">
 					<i class="ion-close-round"></i>
 				</div>
@@ -418,6 +418,12 @@
 								<span class="micon bi bi-textarea-resize"></span
 								><span class="mtext">Barber</span>
 							</a>
+							<ul class="submenu">
+								<li><router-link to="/barberlist">Haircut Crew List</router-link></li>	
+							</ul>
+							<ul class="submenu">
+								<li><router-link to="/addbarbers">Add Haircut Crew</router-link></li>	
+							</ul>
 							<ul class="submenu">
 								<li><router-link to="/shiftslist">Shift List</router-link></li>	
 							</ul>

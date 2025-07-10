@@ -18,7 +18,7 @@ th,
 td {
   padding: 8px 12px;
   border: 1px solid #ddd;
-  text-align: left;
+  text-align: center;
 }
 
 /* Header background */
@@ -32,6 +32,26 @@ tr:nth-child(even) {
   background-color: #f0f4f8;
 }
 
+
+@keyframes fadeInTable {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}@media screen and (max-width: 768px) {
+  th, td {
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+
+  .table-container {
+    padding: 5px;
+  }
+}
 /* Hover effect */
 /* tbody tr:hover {
   background-color: #caf5ec;
