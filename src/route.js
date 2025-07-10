@@ -11,6 +11,9 @@ import ShowBarber from './components/Views/Barbers/Barber/ShowBarber.vue'
 import ServiceCategoriesList from './components/Views/Service/ServiceCategory/ServiceCategoriesList.vue'
 import AddserviceCategory from './components/Views/Service/ServiceCategory/AddserviceCategory.vue'
 import EditServiceCategorie from './components/Views/Service/ServiceCategory/EditServiceCategorie.vue'
+import ServiceList from './components/Views/Service/Service/ServiceList.vue'
+import AddService from './components/Views/Service/Service/AddService.vue'
+import EditService from './components/Views/Service/Service/EditService.vue'
 
 const routes = [
   { path: '/', component: Dashboard },
@@ -26,6 +29,11 @@ const routes = [
   { path: '/servicecategorieslist', component: ServiceCategoriesList },
   { path: '/addservicecategory', component: AddserviceCategory },
   { path: '/editservicecategory/:id', component: EditServiceCategorie },
+  
+  { path: '/servicelist', component: ServiceList },
+  { path: '/addservice', component: AddService },
+   { path: '/editservice/:id', component: EditService },
+
 ]
 
 const router = createRouter({

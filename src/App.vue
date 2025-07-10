@@ -415,7 +415,7 @@
 						</li>
 						<li class="dropdown">
 							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon bi bi-textarea-resize"></span
+								<span class="micon bi  bi-person"></span
 								><span class="mtext">Barber</span>
 							</a>
 							<ul class="submenu">
@@ -434,6 +434,8 @@
 								><span class="mtext">Service</span>
 							</a>
 							<ul class="submenu">
+								<li><router-link to="/servicelist">Service List</router-link></li>
+								<li><router-link to="/addservice">Add Service</router-link></li>
 								<li><router-link to="/servicecategorieslist">Service Category List</router-link></li>
 								
 							</ul>
