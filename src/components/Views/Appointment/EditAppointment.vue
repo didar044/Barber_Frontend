@@ -338,7 +338,7 @@ export default {
 
     async loadAppointment() {
       try {
-        const res = await fetch(`http://127.0.0.1:8000/api/appointments/${this.id}`);
+        const res = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/appointments/${this.id}`);
         if (!res.ok) throw new Error('Failed to fetch appointment.');
         const data = await res.json();
 
@@ -395,7 +395,7 @@ export default {
       };
 
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/appointments/${this.id}`, {
+        const response = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/appointments/${this.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

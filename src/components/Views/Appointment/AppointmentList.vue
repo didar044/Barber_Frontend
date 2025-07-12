@@ -1,7 +1,7 @@
 <template>
   <div class="animated-container">
     <router-link to="/"><i class="bi bi-house-fill"></i> Home</router-link>
-    <router-link to="/addappoinments"><i class="bi bi-plus-circle"></i> Add Ap</router-link>
+    <router-link to="/addappoinments"><i class="bi bi-plus-circle"></i> Add Appointment</router-link>
   </div>
   <div class="table-container">
     <h2>Appointment List</h2>
@@ -65,7 +65,7 @@
          
           </td>
           <td v-else>
-                 <router-link :to="`/showappoinments/${appt.id}`">
+            <router-link :to="`/showappoinments/${appt.id}`">
               <button class="action-button view-button">
                 <i class="bi bi-eye"></i>
               </button>
@@ -126,7 +126,7 @@ export default {
   },
   methods: {
     fetchAppointments(page = 1) {
-      fetch(`http://127.0.0.1:8000/api/appointments?page=${page}`)
+      fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/appointments?page=${page}`)
         .then(res => res.json())
         .then(data => {
           this.appointments = data;
@@ -138,7 +138,7 @@ export default {
 
     deleteAppointment(id) {
       if (confirm("Are you sure you want to delete this appointment?")) {
-        fetch(`http://127.0.0.1:8000/api/appointments/${id}`, {
+        fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/appointments/${id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
@@ -161,7 +161,7 @@ export default {
 
     async updateStatus(id, status) {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/appointments/${id}/status`, {
+        const response = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/appointments/${id}/status`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",

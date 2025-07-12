@@ -23,6 +23,10 @@ import AddAppointment from './components/Views/Appointment/AddAppointment.vue'
 import TokenAppoinment from './components/Views/Appointment/TokenAppoinment.vue'
 import EditAppointment from './components/Views/Appointment/EditAppointment.vue'
 import ShowAppointment from './components/Views/Appointment/ShowAppointment.vue'
+import AddPayment from './components/Views/Payment/AddPayment.vue'
+import Payment from './components/Views/Payment/Payment.vue'
+import PaymentList from './components/Views/Payment/PaymentList.vue'
+import MoneyReceipt from './components/Views/Payment/MoneyReceipt.vue'
 
 const routes = [
   { path: '/', component: Dashboard },
@@ -53,6 +57,11 @@ const routes = [
    { path: '/tokenappoinments/:id', component: TokenAppoinment,props: true },
    { path: '/editappoinments/:id', component: EditAppointment, props: true },
    { path: '/showappoinments/:id', component: ShowAppointment, props: true },
+
+    { path: '/addpayments/', component: AddPayment },
+    { path: '/payments/:id', component: Payment },
+    { path: '/paymentlists/', component: PaymentList },
+    { path: '/moneyreceipts/:id', component: MoneyReceipt },
 
 
 ]

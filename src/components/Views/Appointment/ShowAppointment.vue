@@ -68,7 +68,7 @@ export default {
     async loadAppointment() {
       const id = this.$route.params.id;
       try {
-        const res = await fetch(`http://127.0.0.1:8000/api/appointments/${id}`);
+        const res = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/appointments/${id}`);
         if (!res.ok) {
           const errorText = await res.text();
           throw new Error(`Server error: ${res.status} ${res.statusText}\n${errorText}`);
