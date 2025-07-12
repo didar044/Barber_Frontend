@@ -27,6 +27,9 @@ import AddPayment from './components/Views/Payment/AddPayment.vue'
 import Payment from './components/Views/Payment/Payment.vue'
 import PaymentList from './components/Views/Payment/PaymentList.vue'
 import MoneyReceipt from './components/Views/Payment/MoneyReceipt.vue'
+import ExpanseCategorieList from './components/Views/Expense/ExoenseCategorie/ExpanseCategorieList.vue'
+import AddExCate from './components/Views/Expense/ExoenseCategorie/AddExCate.vue'
+import EditExCat from './components/Views/Expense/ExoenseCategorie/EditExCat.vue'
 
 const routes = [
   { path: '/', component: Dashboard },
@@ -62,6 +65,10 @@ const routes = [
     { path: '/payments/:id', component: Payment },
     { path: '/paymentlists/', component: PaymentList },
     { path: '/moneyreceipts/:id', component: MoneyReceipt },
+
+     { path: '/expansecategorielist', component: ExpanseCategorieList },
+     { path: '/addexpansecategorie', component: AddExCate },
+      { path: '/editexpansecategorie/:id', component: EditExCat },
 
 
 ]

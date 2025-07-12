@@ -399,12 +399,24 @@
 						</li>
 						<li class="dropdown">
 							<a href="javascript:;" class="dropdown-toggle">
-								<span class="micon bi i bi-wallet"></span
+								<span class="micon bi  bi-wallet"></span
 								><span class="mtext">Payment</span>
 							</a>
 							<ul class="submenu">
 								<li><router-link to="/paymentlists">Payment List</router-link></li>
 								<li><router-link to="/addpayments">Add Payment</router-link></li>
+								
+							
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-cash-coin"></span  
+								><span class="mtext">Expense</span>
+							</a>
+							<ul class="submenu">
+								<li><router-link to="/expansecategorielist">Expanse Categorie List</router-link></li>
+								
 								
 							
 							</ul>

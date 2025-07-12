@@ -115,27 +115,27 @@ export default {
     },
 
     deletecustomer(id) {
-      if (confirm("Are you sure you want to delete this customer?")) {
-        fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/${id}`, {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
+    if (confirm("Are you sure you want to delete this customer?")) {
+      fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/customers/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error("Failed to delete customer.");
+          return res.json();
         })
-          .then((res) => {
-            if (!res.ok) throw new Error("Failed to delete customer.");
-            return res.json();
-          })
-          .then(() => {
-            this.fetchcustomers(this.customers.current_page);
-          })
-          .catch((error) => {
-            console.error("Delete error:", error);
-            alert("Something went wrong while deleting.");
-          });
-      }
-    },
+        .then(() => {
+          this.fetchcustomers(this.customers.current_page); // refresh the table
+        })
+        .catch((error) => {
+          console.error("Delete error:", error);
+          alert("Something went wrong while deleting.");
+        });
+    }
+  }
   },
 };
 </script>
