@@ -2,7 +2,7 @@
 
 <template>
     <div class="title pb-20">
-					<h2 class="h3 mb-0">Hospital Overview</h2>
+					<h2 class="h3 mb-0">Barberflow Overview</h2>
 				</div>
 
 				<div class="row pb-10">
@@ -29,7 +29,7 @@
 								<div class="widget-data">
 									<div class="weight-700 font-24 text-dark">124,551</div>
 									<div class="font-14 text-secondary weight-500">
-										Total Patient
+										Total Customers
 									</div>
 								</div>
 								<div class="widget-icon">
@@ -46,7 +46,7 @@
 								<div class="widget-data">
 									<div class="weight-700 font-24 text-dark">400+</div>
 									<div class="font-14 text-secondary weight-500">
-										Total Doctor
+										Total Barber
 									</div>
 								</div>
 								<div class="widget-icon">
@@ -83,7 +83,7 @@
 							<div
 								class="d-flex flex-wrap justify-content-between align-items-center pb-0 pb-md-3"
 							>
-								<div class="h5 mb-md-0">Hospital Activities</div>
+								<div class="h5 mb-md-0">Barber Activities</div>
 								<div class="form-group mb-md-0">
 									<select class="form-control form-control-sm selectpicker">
 										<option value="">Last Week</option>
@@ -133,7 +133,7 @@
 							</div>
 							<div class="d-flex justify-content-between align-items-end">
 								<div class="text-white">
-									<div class="font-14">Surgery</div>
+									<div class="font-14">Complite</div>
 									<div class="font-24 weight-500">250</div>
 								</div>
 								<div class="max-width-150">
@@ -148,7 +148,7 @@
 					<div class="col-lg-4 col-md-6 mb-20">
 						<div class="card-box height-100-p pd-20 min-height-200px">
 							<div class="d-flex justify-content-between pb-10">
-								<div class="h5 mb-0">Top Doctors</div>
+								<div class="h5 mb-0">Top Barber</div>
 								<div class="dropdown">
 									<a
 										class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
@@ -194,9 +194,9 @@
 													data-color="#265ed7"
 													>4.9</span
 												>
-												<div class="font-14 weight-600">Dr. Neil Wagner</div>
+												<div class="font-14 weight-600"> Neil Wagner</div>
 												<div class="font-12 weight-500" data-color="#b2b1b6">
-													Pediatrician
+													hg
 												</div>
 											</div>
 										</div>
@@ -303,7 +303,7 @@
 					<div class="col-lg-4 col-md-6 mb-20">
 						<div class="card-box height-100-p pd-20 min-height-200px">
 							<div class="d-flex justify-content-between">
-								<div class="h5 mb-0">Diseases Report</div>
+								<div class="h5 mb-0">Costomer Report</div>
 								<div class="dropdown">
 									<a
 										class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
@@ -353,14 +353,14 @@
 				</div>
 
 				<div class="card-box pb-10">
-					<div class="h5 pd-20 mb-0">Recent Patient</div>
+					<div class="h5 pd-20 mb-0">Recent Customers</div>
 					<table class="data-table table nowrap">
 						<thead>
 							<tr>
 								<th class="table-plus">Name</th>
 								<th>Gender</th>
 								<th>Weight</th>
-								<th>Assigned Doctor</th>
+								<th>Assigned </th>
 								<th>Admit Date</th>
 								<th>Disease</th>
 								<th class="datatable-nosort">Actions</th>

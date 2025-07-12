@@ -75,7 +75,7 @@ export default {
   methods: {
     async fetchCategories() {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/servicecategories");
+        const response = await fetch("http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/servicecategories");
         const data = await response.json();
         this.categories = data;
       } catch (error) {
@@ -84,7 +84,7 @@ export default {
     },
     async submitForm() {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/services", {
+        const response = await fetch("http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/services", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

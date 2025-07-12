@@ -55,7 +55,7 @@ export default {
   methods: {
     async fetchCategories() {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/servicecategories");
+        const response = await fetch("http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/servicecategories");
         if (!response.ok) throw new Error("Failed to fetch categories");
         const data = await response.json();
         this.categories = data;
@@ -68,7 +68,7 @@ export default {
       if (!confirm("Are you sure you want to delete this category?")) return;
 
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/servicecategories/${id}`, {
+        const response = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/servicecategories/${id}`, {
           method: "DELETE",
           headers: {
             "Accept": "application/json",
@@ -82,7 +82,7 @@ export default {
         alert("Category deleted successfully.");
       } catch (error) {
         console.error("Delete failed:", error);
-        alert("Failed to delete category.");
+        alert("Failed to delete category. Because it is linked to existing services.");
       }
     },
   },

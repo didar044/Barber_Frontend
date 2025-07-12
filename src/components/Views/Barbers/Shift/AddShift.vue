@@ -7,18 +7,40 @@
   <div class="container mt-4">
     <h2 class="mb-3">Shift Add</h2>
     <form @submit.prevent="createShift" class="mb-4">
-      <div class="input-group">
+      <div class="mb-3">
+        <label class="form-label">Shift Name</label>
         <input
-          v-model="newShift"
+          v-model="newShift.name"
           type="text"
           class="form-control"
           placeholder="Enter shift name"
           required
         />
-        <button type="submit" class="btn btn-success">
-          <i class="bi bi-plus-circle"></i> Add
-        </button>
       </div>
+
+      <div class="mb-3">
+        <label class="form-label">Start Time</label>
+        <input
+          v-model="newShift.start_time"
+          type="time"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">End Time</label>
+        <input
+          v-model="newShift.end_time"
+          type="time"
+          class="form-control"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> Add Shift
+      </button>
     </form>
   </div>
 </template>
@@ -27,11 +49,13 @@
 export default {
   data() {
     return {
-      newShift: "",
-      shifts: [], 
+      newShift: {
+        name: "",
+        start_time: "",
+        end_time: "",
+      },
     };
   },
-
   methods: {
     createShift() {
       fetch("http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/shifts", {
@@ -40,18 +64,11 @@ export default {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({
-          name: this.newShift,
-        }),
+        body: JSON.stringify(this.newShift),
       })
         .then((res) => res.json())
         .then((data) => {
-          
-
-          // Option 2: redirect to list page after add
           this.$router.push("/shiftslist");
-
-          this.newShift = ""; 
         })
         .catch((err) => console.error("Error:", err));
     },

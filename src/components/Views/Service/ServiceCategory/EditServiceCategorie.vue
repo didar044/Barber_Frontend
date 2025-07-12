@@ -40,7 +40,7 @@ export default {
       const id = this.$route.params.id;
 
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/servicecategories/${id}`);
+        const response = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/servicecategories/${id}`);
         if (!response.ok) throw new Error("Failed to load category data");
 
         const data = await response.json();
@@ -57,7 +57,7 @@ export default {
       const id = this.$route.params.id;
 
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/servicecategories/${id}`, {
+        const response = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/servicecategories/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

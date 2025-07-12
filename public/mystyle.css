@@ -6,10 +6,12 @@
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  overflow-x: auto; /* Enables horizontal scrolling on small screens */
 }
 
 table {
   width: 100%;
+  min-width: 250px; 
   border-collapse: collapse;
   font-family: Arial, sans-serif;
 }
@@ -27,7 +29,7 @@ thead {
   color: white;
 }
 
-/* Zebra stripes */
+
 tr:nth-child(even) {
   background-color: #f0f4f8;
 }
@@ -42,7 +44,10 @@ tr:nth-child(even) {
     opacity: 1;
     transform: translateY(0);
   }
-}@media screen and (max-width: 768px) {
+}
+
+
+@media screen and (max-width: 768px) {
   th, td {
     padding: 6px 8px;
     font-size: 14px;
@@ -51,7 +56,13 @@ tr:nth-child(even) {
   .table-container {
     padding: 5px;
   }
+
+  table {
+    min-width: 100%; 
+    font-size: 13px;
+  }
 }
+
 /* Hover effect */
 /* tbody tr:hover {
   background-color: #caf5ec;
@@ -123,7 +134,7 @@ h2 {
   background-color: #1d3557;
 }
 .edit-button::before {
-  background-color: 		#d97e1d;
+  background-color: 		#fd7e14;
 }
 
 .delete-button {

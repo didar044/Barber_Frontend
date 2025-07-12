@@ -14,6 +14,15 @@ import EditServiceCategorie from './components/Views/Service/ServiceCategory/Edi
 import ServiceList from './components/Views/Service/Service/ServiceList.vue'
 import AddService from './components/Views/Service/Service/AddService.vue'
 import EditService from './components/Views/Service/Service/EditService.vue'
+import CustomerList from './components/Views/Customer/CustomerList.vue'
+import AddCustomer from './components/Views/Customer/AddCustomer.vue'
+import EditCustomer from './components/Views/Customer/EditCustomer.vue'
+import ShowCustomer from './components/Views/Customer/ShowCustomer.vue'
+import AppointmentList from './components/Views/Appointment/AppointmentList.vue'
+import AddAppointment from './components/Views/Appointment/AddAppointment.vue'
+import TokenAppoinment from './components/Views/Appointment/TokenAppoinment.vue'
+import EditAppointment from './components/Views/Appointment/EditAppointment.vue'
+import ShowAppointment from './components/Views/Appointment/ShowAppointment.vue'
 
 const routes = [
   { path: '/', component: Dashboard },
@@ -32,7 +41,19 @@ const routes = [
   
   { path: '/servicelist', component: ServiceList },
   { path: '/addservice', component: AddService },
-   { path: '/editservice/:id', component: EditService },
+  { path: '/editservice/:id', component: EditService },
+
+  { path: '/customerlist', component: CustomerList },
+  { path: '/addcustomer', component: AddCustomer },
+  { path: '/editcustomer/:id', component: EditCustomer },
+  { path: '/showcustomer/:id', component: ShowCustomer },
+
+   { path: '/appoinmentlists/', component: AppointmentList },
+   { path: '/addappoinments/', component: AddAppointment },
+   { path: '/tokenappoinments/:id', component: TokenAppoinment,props: true },
+   { path: '/editappoinments/:id', component: EditAppointment, props: true },
+   { path: '/showappoinments/:id', component: ShowAppointment, props: true },
+
 
 ]
 

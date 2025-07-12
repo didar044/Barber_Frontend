@@ -77,7 +77,7 @@ export default {
   methods: {
     async fetchServices() {
       try {
-        const res = await fetch("http://127.0.0.1:8000/api/services");
+        const res = await fetch("http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/services");
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();
         this.services = data.data;
@@ -90,7 +90,7 @@ export default {
       if (!confirm("Are you sure you want to delete this service?")) return;
 
       try {
-        const res = await fetch(`http://127.0.0.1:8000/api/services/${id}`, {
+        const res = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/services/${id}`, {
           method: "DELETE",
           headers: {
             "Accept": "application/json",

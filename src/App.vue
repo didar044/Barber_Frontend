@@ -109,7 +109,7 @@
 									<li>
 										<a href="#">
 											<img src="/vendors/images/img.jpg" alt="" />
-											<h3>John Doe</h3>
+											<h3>Fatehabad Fades</h3>
 											<p>
 												Lorem ipsum dolor sit amet, consectetur adipisicing
 												elit, sed...
@@ -182,21 +182,21 @@
 							<span class="user-icon">
 								<img src="/vendors/images/photo1.jpg" alt="" />
 							</span>
-							<span class="user-name">Ross C. Lopez</span>
+							<span class="user-name">Fatehabad Fades</span>
 						</a>
 						<div
 							class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
 						>
-							<a class="dropdown-item" href="profile.html"
+							<a class="dropdown-item" href="#"
 								><i class="dw dw-user1"></i> Profile</a
 							>
-							<a class="dropdown-item" href="profile.html"
+							<a class="dropdown-item" href="#"
 								><i class="dw dw-settings2"></i> Setting</a
 							>
-							<a class="dropdown-item" href="faq.html"
+							<a class="dropdown-item" href="#"
 								><i class="dw dw-help"></i> Help</a
 							>
-							<a class="dropdown-item" href="login.html"
+							<a class="dropdown-item" href="#"
 								><i class="dw dw-logout"></i> Log Out</a
 							>
 						</div>
@@ -389,9 +389,9 @@
     <div class="left-side-bar">
 			<div class="brand-logo">
 				<router-link to="/">
-					<img src="/vendors/images/deskapp-logo.svg" alt="" class="dark-logo" />
+					<img src="/vendors/images/amy.png" alt="" class="dark-logo" />
 					<img
-						src="/vendors/images/deskapp-logo-white.svg"
+						src="/vendors/images/adark.png"
 						alt=""
 						class="light-logo"
 					/>
@@ -440,7 +440,30 @@
 								
 							</ul>
 						</li>
-					<!-- 	<li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-people-fill"></span
+								><span class="mtext">Customer</span>
+							</a>
+							<ul class="submenu">
+								<li><router-link to="/customerlist">Customer List</router-link></li>
+								<li><router-link to="/addcustomer">Add Customer</router-link></li>
+								
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-clock"></span
+								><span class="mtext">Appoinment</span>
+							</a>
+							<ul class="submenu">
+								<li><router-link to="/appoinmentlists">Appoinment List</router-link></li>
+								<li><router-link to="/addappoinments">Add Appoinment</router-link></li>
+								
+							</ul>
+						</li>
+
+					<!-- <li>
 							<a href="calendar.html" class="dropdown-toggle no-arrow">
 								<span class="micon bi bi-calendar4-week"></span
 								><span class="mtext">Calendar</span>

@@ -1,4 +1,8 @@
 <template>
+   <div class="animated-container">
+    <router-link to="/servicelist"><i class="bi bi-arrow-left"></i> Back To Service LIst</router-link>
+    <router-link to="/"><i class="bi bi-house-fill"></i> Home</router-link>
+  </div>
   <div class="barber-form-container">
     <h2 class="barber-title">Edit/Update Service</h2>
 
@@ -67,7 +71,7 @@ export default {
   methods: {
     async fetchCategories() {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/servicecategories");
+        const response = await fetch("http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/servicecategories");
         const data = await response.json();
         this.categories = data;
       } catch (error) {
@@ -78,7 +82,7 @@ export default {
     async fetchService() {
       const id = this.$route.params.id;
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/services/${id}`);
+        const response = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/services/${id}`);
         const data = await response.json();
         this.form = {
           name: data.name,
@@ -97,7 +101,7 @@ export default {
     async submitForm() {
       const id = this.$route.params.id;
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/services/${id}`, {
+        const response = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/services/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
