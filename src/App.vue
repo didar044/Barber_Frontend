@@ -415,7 +415,7 @@
 								><span class="mtext">Expense</span>
 							</a>
 							<ul class="submenu">
-								<li><router-link to="/expansecategorielist">Expanse Categorie List</router-link></li>
+								<li><router-link to="/expansecategorielist">Expanse Categorie </router-link></li>
 								
 								
 							

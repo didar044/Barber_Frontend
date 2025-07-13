@@ -107,6 +107,8 @@ export default {
           console.error("Error fetching appointments:", error);
         });
     },
+
+     
   },
 };
 </script>

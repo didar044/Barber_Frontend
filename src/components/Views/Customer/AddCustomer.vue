@@ -25,8 +25,8 @@
         </div>
 
         <div class="barber-form-group">
-          <label>Address</label>
-          <textarea v-model="form.address"></textarea>
+          <label>Address <span class="barber-required">*</span></label>
+          <textarea v-model="form.address" required></textarea>
         </div>
 
         <div class="barber-form-group">

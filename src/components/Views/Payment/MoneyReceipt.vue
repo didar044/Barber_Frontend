@@ -1,72 +1,79 @@
 <template>
- <div class="animated-container">
-    <router-link to="/paymentlists"><i class="bi bi-arrow-left"></i> Back</router-link>
-    <button @click="printPage" class="action-button view-button"><i class="bi bi-printer-fill"></i> Print Profile </button> 
-  </div>
-  <div v-if="payment" class="receipt-wrapper container p-4" style="max-width: 800px; margin-top: 10px;">
-    <h2 class="text-center mb-3">Money Receipt</h2>
-     
-    <!-- Company Info -->
-    <div class="mb-4 text-center">
-      <h4>Fatehabad Fades</h4>
-      <p>123 Education Lane, Cityville, ST 45678</p>
-      <p>Email: info@fatehabad.com | Phone: 01234567890</p>
+  <div>
+    <div class="animated-container">
+      <router-link to="/paymentlists">
+        <i class="bi bi-arrow-left"></i> Back
+      </router-link>
+      <button @click="printPage" class="action-button view-button">
+        <i class="bi bi-printer-fill"></i> Print Profile
+      </button>
     </div>
 
-    <!-- Header Info -->
-    <div class="d-flex justify-content-between mb-3">
-      <div>
-        <h5>Customer Info</h5>
-        <p><strong>Name:</strong> {{ payment.appointment.customer?.name }}</p>
-        <p><strong>Phone:</strong> {{ payment.appointment.customer?.phone }}</p>
-        <p><strong>Address:</strong> {{ payment.appointment.customer?.address }}</p>
-      </div>
-      <div>
-        <h5>Barber Info</h5>
-        <p><strong>Name:</strong>{{ payment.appointment.barber?.name }}</p>
-        <p><strong>Phone:</strong>{{ payment.appointment.barber?.mobile_number }}</p>
-        <p><strong>Address:</strong> {{ payment.appointment.barber?.address }}</p>
-      </div>
-      <div>
-        <p><strong>Appointment ID:</strong>{{ payment.appointment_id }} </p>
-        <p><strong>Date:</strong> {{ payment.payment_date }}</p>
-        <p><strong>Payment Method:</strong> {{ payment.payment_method }}</p>
-        <p><strong>Referench No:</strong> {{ payment.reference_number || ('RC' + payment.id.toString().padStart(4, '0')) }}</p>
-      </div>
-    </div>
+    <div v-if="payment" class="receipt-wrapper container p-4" style="max-width: 800px; margin-top: 40px; margin-bottom: 30px;">
+      <h2 class="text-center mb-3">Money Receipt</h2>
 
-    <!-- Payment Summary -->
+      <!-- Company Info -->
+      <div class="mb-4 text-center">
+        <h4>Fatehabad Fades</h4>
+        <p>123 Education Lane, Cityville, ST 45678</p>
+        <p>Email: info@fatehabad.com | Phone: 01234567890</p>
+      </div>
 
-<table class="table table-bordered">
-  <thead style="color: black;">
-    <tr>
-      <th>#</th>
-      <th>Service Name</th>
-      <th>Price</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-    <tr v-for="(service, index) in payment.appointment.services" :key="service.id">
-      <td>{{ index + 1 }}</td>
-      <td>{{ service.service_name }}</td>  
-      <td>{{ service.service_price }}</td> 
-    </tr>
-  </tbody>
-</table>
-   <div>
-    <p style="font-size: 15px;"><strong> Money Receipt No:</strong>{{ payment.id }} </p>
-   </div>
-    <div class="text-end">
-      <p><strong>Total:</strong> ${{ parseFloat(payment.total_amount).toFixed(2) }}</p>
-      <p><strong>Discount:</strong> ${{ parseFloat(payment.discount).toFixed(2) }}</p>
-      <p><strong>Paid:</strong> ${{ parseFloat(payment.paid_amount).toFixed(2) }}</p>
-      <p><strong>Due:</strong> ${{ (parseFloat(payment.total_amount) - parseFloat(payment.paid_amount)).toFixed(2) }}</p>
-    </div>
+      <!-- Header Info -->
+      <div class="d-flex justify-content-between mb-3">
+        <div>
+          <h5>Customer Info</h5>
+          <p><strong>Name:</strong> {{ payment.appointment?.customer?.name || 'N/A' }}</p>
+          <p><strong>Phone:</strong> {{ payment.appointment?.customer?.phone || 'N/A' }}</p>
+          <p><strong>Address:</strong> {{ payment.appointment?.customer?.address || 'N/A' }}</p>
+        </div>
+        <div>
+          <h5>Barber Info</h5>
+          <p><strong>Name:</strong> {{ payment.appointment?.barber?.name || 'N/A' }}</p>
+          <p><strong>Phone:</strong> {{ payment.appointment?.barber?.mobile_number || 'N/A' }}</p>
+          <p><strong>Address:</strong> {{ payment.appointment?.barber?.address || 'N/A' }}</p>
+        </div>
+        <div>
+          <p><strong>Appointment ID:</strong> {{ payment.appointment_id || 'N/A' }}</p>
+          <p><strong>Date:</strong> {{ payment.payment_date || 'N/A' }}</p>
+          <p><strong>Payment Method:</strong> {{ payment.payment_method || 'N/A' }}</p>
+          <p><strong>Reference No:</strong> {{ payment.reference_number || ('RC' + payment.id.toString().padStart(4, '0')) }}</p>
+        </div>
+      </div>
 
-    <div class="text-center mt-4">
-      <p>Thank you for your payment!</p>
-      <button class="btn btn-primary"  @click="printPage" >Print Receipt</button>
+      <!-- Payment Summary -->
+      <table class="table table-bordered">
+        <thead style="color: black;">
+          <tr>
+            <th>#</th>
+            <th>Service Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(service, index) in payment.appointment?.services || []" :key="service.id">
+            <td>{{ index + 1 }}</td>
+            <td>{{ service.service_name }}</td>
+            <td>{{ service.service_price }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div>
+        <p style="font-size: 15px;"><strong>Money Receipt No:</strong> {{ payment.id }}</p>
+      </div>
+
+      <div class="text-end">
+        <p><strong>Total:</strong> ${{ parseFloat(payment.total_amount || 0).toFixed(2) }}</p>
+        <p><strong>Discount:</strong> ${{ parseFloat(payment.discount || 0).toFixed(2) }}</p>
+        <p><strong>Paid:</strong> ${{ parseFloat(payment.paid_amount || 0).toFixed(2) }}</p>
+        <p><strong>Due:</strong> ${{ (parseFloat(payment.total_amount || 0) - parseFloat(payment.paid_amount || 0)).toFixed(2) }}</p>
+      </div>
+
+      <div class="text-center mt-4">
+        <p>Thank you for your payment!</p>
+        <button class="btn btn-primary" @click="printPage">Print Receipt</button>
+      </div>
     </div>
   </div>
 </template>
@@ -78,25 +85,27 @@ export default {
     return {
       payment: null,
     };
-    
   },
-  
   mounted() {
-    // Load the first payment for demo
-    fetch("http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/payments")
+    const id = this.$route.params.id;
+    fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/payments/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        this.payment = data.data[0]; // You can change index or use route param for dynamic ID
-      });
+        this.payment = data;
+      })
+      .catch((err) => console.error("Error loading payment:", err));
   },
-    methods: {
-  printPage() {
-    window.print();
+  methods: {
+    printPage() {
+      window.print();
+    },
   },
-},
-  
 };
 </script>
+
+
+
+
 
 <style scoped>
 .receipt-wrapper {

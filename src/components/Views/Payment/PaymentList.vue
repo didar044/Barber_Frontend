@@ -46,7 +46,7 @@
             </td>
           </tr>
           <tr v-if="payments.data.length === 0">
-            <td colspan="7" style="text-align:center;">No payments found.</td>
+            <td colspan="9" style="text-align:center;">No payments found.</td>
           </tr>
         </tbody>
       </table>
