@@ -30,6 +30,9 @@ import MoneyReceipt from './components/Views/Payment/MoneyReceipt.vue'
 import ExpanseCategorieList from './components/Views/Expense/ExoenseCategorie/ExpanseCategorieList.vue'
 import AddExCate from './components/Views/Expense/ExoenseCategorie/AddExCate.vue'
 import EditExCat from './components/Views/Expense/ExoenseCategorie/EditExCat.vue'
+import ExpenseList from './components/Views/Expense/Expenses/ExpenseList.vue'
+import AddEx from './components/Views/Expense/Expenses/AddEx.vue'
+import EditExpenses from './components/Views/Expense/Expenses/EditExpenses.vue'
 
 const routes = [
   { path: '/', component: Dashboard },
@@ -55,20 +58,24 @@ const routes = [
   { path: '/editcustomer/:id', component: EditCustomer },
   { path: '/showcustomer/:id', component: ShowCustomer },
 
-   { path: '/appoinmentlists/', component: AppointmentList },
-   { path: '/addappoinments/', component: AddAppointment },
-   { path: '/tokenappoinments/:id', component: TokenAppoinment,props: true },
-   { path: '/editappoinments/:id', component: EditAppointment, props: true },
-   { path: '/showappoinments/:id', component: ShowAppointment, props: true },
+  { path: '/appoinmentlists/', component: AppointmentList },
+  { path: '/addappoinments/', component: AddAppointment },
+  { path: '/tokenappoinments/:id', component: TokenAppoinment,props: true },
+  { path: '/editappoinments/:id', component: EditAppointment, props: true },
+  { path: '/showappoinments/:id', component: ShowAppointment, props: true },
 
-    { path: '/addpayments/', component: AddPayment },
-    { path: '/payments/:id', component: Payment },
-    { path: '/paymentlists/', component: PaymentList },
-    { path: '/moneyreceipts/:id', component: MoneyReceipt },
+  { path: '/addpayments/', component: AddPayment },
+  { path: '/payments/:id', component: Payment },
+  { path: '/paymentlists/', component: PaymentList },
+  { path: '/moneyreceipts/:id', component: MoneyReceipt },
 
-     { path: '/expansecategorielist', component: ExpanseCategorieList },
-     { path: '/addexpansecategorie', component: AddExCate },
-      { path: '/editexpansecategorie/:id', component: EditExCat },
+  { path: '/expansecategorielist', component: ExpanseCategorieList },
+  { path: '/addexpansecategorie', component: AddExCate },
+  { path: '/editexpansecategorie/:id', component: EditExCat },
+
+  { path: '/expanselists', component: ExpenseList },
+   { path: '/addexpanses', component: AddEx },
+   { path: '/editexpanses/:id', component: EditExpenses },
 
 
 ]

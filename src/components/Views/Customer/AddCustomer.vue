@@ -20,8 +20,8 @@
         </div>
 
         <div class="barber-form-group">
-          <label>Email</label>
-          <input v-model="form.email" type="email" />
+          <label>Email <span class="barber-required">*</span></label>
+          <input v-model="form.email" type="email" required />
         </div>
 
         <div class="barber-form-group">

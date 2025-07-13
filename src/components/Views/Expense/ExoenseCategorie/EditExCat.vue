@@ -55,7 +55,7 @@ export default {
   methods: {
     async fetchCategory() {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/expensecategories/${this.categoryId}`);
+        const response = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/expensecategories/${this.categoryId}`);
         if (!response.ok) throw new Error("Failed to fetch category");
         const data = await response.json();
         this.form.name = data.name;
@@ -73,8 +73,8 @@ export default {
       }
 
       const url = this.isEditMode
-        ? `http://127.0.0.1:8000/api/expensecategories/${this.categoryId}`
-        : `http://127.0.0.1:8000/api/expensecategories`;
+        ? `http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/expensecategories/${this.categoryId}`
+        : `http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/expensecategories`;
 
       const method = this.isEditMode ? "PUT" : "POST";
 

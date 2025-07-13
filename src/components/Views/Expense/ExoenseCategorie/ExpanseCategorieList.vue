@@ -56,7 +56,7 @@ export default {
   methods: {
     async fetchCategories() {
       try {
-        const response = await fetch("http://127.0.0.1:8000/api/expensecategories");
+        const response = await fetch("http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/expensecategories");
         if (!response.ok) throw new Error("Failed to fetch categories");
         const data = await response.json();
         this.categories = data;
@@ -70,7 +70,7 @@ export default {
       if (!confirm("Are you sure you want to delete this category?")) return;
 
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/expensecategories/${id}`, {
+        const response = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/expensecategories/${id}`, {
           method: "DELETE",
           headers: {
             Accept: "application/json",
