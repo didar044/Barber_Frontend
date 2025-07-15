@@ -69,7 +69,7 @@ export default {
   methods: {
     async loadAppointments() {
 
-    const res = await fetch("http://127.0.0.1:8000/api/appointments");
+    const res = await fetch("http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/appointments");
     const data = await res.json();
     this.appointments = data.data; // ✅ Correct: get only the appointment array
  
@@ -89,7 +89,7 @@ export default {
 
     async submitForm() {
       try {
-        const res = await fetch("http://127.0.0.1:8000/api/feedbacks", {
+        const res = await fetch("http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/feedbacks", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(this.form)

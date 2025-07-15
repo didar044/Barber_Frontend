@@ -79,7 +79,7 @@ export default {
   methods: {
     async fetchfeedback(page = 1) {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/feedbacks?page=${page}`);
+        const response = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/feedbacks?page=${page}`);
         if (response.ok) {
           const data = await response.json();
           this.feedbacks = data.data;
@@ -98,7 +98,7 @@ export default {
       if (!confirm("Are you sure you want to delete this feedback?")) return;
 
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/feedbacks/${id}`, {
+        const response = await fetch(`http://didar.intelsofts.com/Laravel_Vue/B_Backend/public/api/feedbacks/${id}`, {
           method: "DELETE",
           headers: { Accept: "application/json" },
         });
