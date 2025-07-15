@@ -17,6 +17,7 @@
           {{ appointment.status || 'pending' }}
         </span>
       </p>
+      <p><strong>Note:</strong> {{ appointment.notes || 'N/A' }}</p>
     </div>
 
     <div class="token-services">

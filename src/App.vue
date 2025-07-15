@@ -418,6 +418,16 @@
 								<li><router-link to="/expansecategorielist">Expanse Categorie </router-link></li> 
 							</ul>
 						</li>
+						<li class="dropdown">
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-star-fill"></span
+								><span class="mtext">Feedback</span>
+							</a>
+							<ul class="submenu">
+								<li><router-link to="/feedbacks">Feedback List</router-link></li>
+								<li><router-link to="/addpayments">Add Payment</router-link></li>
+							</ul>
+						</li>
 
 					<!-- <li>
 							<a href="calendar.html" class="dropdown-toggle no-arrow">

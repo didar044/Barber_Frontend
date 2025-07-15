@@ -168,7 +168,7 @@ button:disabled {
       <!-- Appointment Info -->
       <div class="barber-row">
         <div class="barber-form-group">
-          <label>Customer *</label>
+          <label>Customer <span class="barber-required">*</span></label>
           <select v-model="form.customer_id" required>
             <option disabled value="">Select Customer</option>
             <option v-for="customer in customers" :key="customer.id" :value="customer.id">
@@ -178,7 +178,7 @@ button:disabled {
         </div>
 
         <div class="barber-form-group">
-          <label>Shift *</label>
+          <label>Shift <span class="barber-required">*</span></label>
           <select v-model="form.shift_id" required>
             <option disabled value="">Select Shift</option>
             <option v-for="shift in shifts" :key="shift.id" :value="shift.id">
@@ -188,7 +188,7 @@ button:disabled {
         </div>
 
         <div class="barber-form-group">
-          <label>Barber *</label>
+          <label>Barber <span class="barber-required">*</span></label>
           <select v-model="form.barber_id" required>
             <option disabled value="">Select Barber</option>
             <option v-for="barber in filteredBarbers" :key="barber.id" :value="barber.id">
@@ -198,19 +198,19 @@ button:disabled {
         </div>
 
         <div class="barber-form-group">
-          <label>Date *</label>
+          <label>Date <span class="barber-required">*</span></label>
           <input type="date" v-model="form.appointment_date" required />
         </div>
 
         <div class="barber-form-group">
-          <label>Time *</label>
+          <label>Time <span class="barber-required">*</span></label>
           <input type="time" v-model="form.appointment_time" required />
         </div>
       </div>
 
       <!-- Services -->
       <div class="barber-row">
-        <h3>Services</h3>
+        <h3>Services <span class="barber-required">*</span></h3>
         <div
           v-for="(item, index) in serviceItems"
           :key="index"

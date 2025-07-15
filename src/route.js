@@ -33,6 +33,8 @@ import EditExCat from './components/Views/Expense/ExoenseCategorie/EditExCat.vue
 import ExpenseList from './components/Views/Expense/Expenses/ExpenseList.vue'
 import AddEx from './components/Views/Expense/Expenses/AddEx.vue'
 import EditExpenses from './components/Views/Expense/Expenses/EditExpenses.vue'
+import FeedBack from './components/Views/FeedBack/FeedBack.vue'
+import AddFeedBack from './components/Views/FeedBack/AddFeedBack.vue'
 
 const routes = [
   { path: '/', component: Dashboard },
@@ -74,8 +76,11 @@ const routes = [
   { path: '/editexpansecategorie/:id', component: EditExCat },
 
   { path: '/expanselists', component: ExpenseList },
-   { path: '/addexpanses', component: AddEx },
-   { path: '/editexpanses/:id', component: EditExpenses },
+  { path: '/addexpanses', component: AddEx },
+  { path: '/editexpanses/:id', component: EditExpenses },
+
+  { path: '/feedbacks', component: FeedBack },
+  { path: '/addfeedbacks', component: AddFeedBack },
 
 
 ]
